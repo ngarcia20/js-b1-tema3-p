@@ -68,7 +68,18 @@
         </form>
         <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+            function unselectExtras(event) {
+                if (event.target.id === 'tinted-windows' || event.target.id === 'armored-windows') {
+                    document.querySelector('#sunroof').checked = false;
+                } else if (event.target.id === 'sunroof') {
+                    document.querySelector('#tinted-windows').checked = false;
+                    document.querySelector('#armored-windows').checked = false;
+                }
+            }
 
+            document.querySelectorAll("input[name='extras']").forEach((input) => {
+                input.addEventListener('change', unselectExtras);
+            });
         </script>
         <script defer id="test">
             /**

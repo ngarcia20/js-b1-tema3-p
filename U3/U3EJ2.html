@@ -78,7 +78,13 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-        
+        function showClass(event) {
+          document.querySelector("#myContent").textContent = event.target.className;
+        }
+
+        document.querySelector(".red").addEventListener("click", showClass);
+        document.querySelector(".green").addEventListener("click", showClass);
+        document.querySelector(".orange").addEventListener("click", showClass);
     </script>
     <script defer id="test">
         /**

@@ -54,7 +54,40 @@
     </body>
 	<script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-		
+		function createTitle(text) {
+			const titleElement = document.querySelector('.title');
+			
+			if (titleElement == null) {
+				const myDiv = document.createElement("div");
+				myDiv.classList.add("title");
+
+				const myH1 = document.createElement("h1");
+				myH1.textContent = text;
+
+				myDiv.appendChild(myH1);
+		       document.getElementById("myContent").appendChild(myDiv);
+			}
+		}
+
+		function createParagraph(text) {
+			const titleElement = document.querySelector('.title');
+
+			if (titleElement != null) {
+				const myP = document.createElement("p");
+				myP.classList.add("paragraph");
+
+				myP.textContent = text;
+				titleElement.appendChild(myP);
+			}
+		}
+
+		createTitle("Títol de prova");
+
+		createParagraph("Paràgraf de prova 1.");
+		createParagraph("Paràgraf de prova 2.");
+		createParagraph("Paràgraf de prova 3.");
+
+		document.querySelector(".paragraph").remove();
 	</script>
     <script defer id="test">
         /**

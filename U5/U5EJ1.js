@@ -24,6 +24,11 @@ localStorage.setItem(
 	);
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+const myTriangles = JSON.parse(localStorage.getItem("myTriangles"));
+
+myTriangles.length = myTriangles.length - 1;
+
+localStorage.setItem("myTriangles", JSON.stringify(myTriangles));
 
 /**
  * TEST

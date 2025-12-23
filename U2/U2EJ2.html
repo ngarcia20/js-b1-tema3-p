@@ -36,14 +36,21 @@
 				background-color: grey;
 			}
             /*Escribe aquí tu solución / escriviu aquí la vostra solució:*/
-            
+            .featuredContent {
+                background-color: black;
+                border: 2px solid blue;
+                color: yellow;
+                font-size: 30px;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
         <div id="myContent" class="content normalContent">INITIAL CONTENT</div>
         <script defer id="solutionJS">
             //Escribe aquí tu solución / escriviu aquí la vostra solució:
-			
+			document.querySelector("#myContent").textContent = "FEATURED CONTENT";
+            document.querySelector("#myContent").classList.replace("normalContent", "featuredContent");
         </script>
         <script defer id="test">
             /**
